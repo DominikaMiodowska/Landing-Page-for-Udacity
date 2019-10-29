@@ -33,14 +33,21 @@ listStart.appendChild(listBooks);
 listStart.appendChild(listEbooks);
 listStart.appendChild(listContact);
 
-listAbout.innerHTML = "<a class='menu__link' href='#about'>About</a>";
-listEbooks.innerHTML = "<a class='menu__link' href='#ebooks'>Ebooks</a>";
-listBooks.innerHTML = "<a class='menu__link' href='#books'>Books</a>";
-listContact.innerHTML = "<a class='menu__link' href='#contact'>Contact</a>";
+listAbout.innerHTML = "<a class='menu__link' id='scrolliing1' href='#about'>About</a>";
+listEbooks.innerHTML = "<a class='menu__link' id='scrolliing2' href='#ebooks'>Ebooks</a>";
+listBooks.innerHTML = "<a class='menu__link' id='scrolliing3' href='#books'>Books</a>";
+listContact.innerHTML = "<a class='menu__link' id='scrolliing4' href='#contact'>Contact</a>";
 
 
-let linkScrolling = document.querySelector('.menu__link');
-linkScrolling.scrollIntoView({behavior: "smooth"});
+let linkScrolling1 = document.querySelector('#scrolliing1');
+let linkScrolling2 = document.querySelector('#scrolliing2');
+let linkScrolling3 = document.querySelector('#scrolliing3');
+let linkScrolling4 = document.querySelector('#scrolliing4');
+
+linkScrolling1.scrollIntoView({behavior: "smooth"});
+linkScrolling2.scrollIntoView({behavior: "smooth"});
+linkScrolling3.scrollIntoView({behavior: "smooth"});
+linkScrolling4.scrollIntoView({behavior: "smooth"});
         
 /**
  * End Helper Functions
