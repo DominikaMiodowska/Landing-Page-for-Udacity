@@ -18,36 +18,29 @@
  * 
 */
 
-const navLink = ["about", "books", "ebooks", "contact"];
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-// function getIDFromHeader(str){
-//     return str.split(" ").join("").toLowerCase();
-// }
 
 // create navbar items
 
-    const listStart = document.querySelector('#navbar__list');
+const listStart = document.querySelector('#navbar__list');
 
-    const listAbout = document.createElement('li');
-    const listBooks = document.createElement('li');
-    const listEbooks = document.createElement('li');
-    const listContact = document.createElement('li');
-    
-    listStart.appendChild(listAbout);
-    listStart.appendChild(listBooks);
-    listStart.appendChild(listEbooks);
-    listStart.appendChild(listContact);
+const listAbout = document.createElement('li');
+const listBooks = document.createElement('li');
+const listEbooks = document.createElement('li');
+const listContact = document.createElement('li');
 
-    listAbout.innerHTML = "<a class='menu__link' href='#about'>About</a>";
-    listEbooks.innerHTML = "<a class='menu__link' href='#ebooks'>Ebooks</a>";
-    listBooks.innerHTML = "<a class='menu__link' href='#books'>Books</a>";
-    listContact.innerHTML = "<a class='menu__link' href='#contact'>Contact</a>";
-      
+listStart.appendChild(listAbout);
+listStart.appendChild(listBooks);
+listStart.appendChild(listEbooks);
+listStart.appendChild(listContact);
+
+listAbout.innerHTML = "<a class='menu__link' href='#about'>About</a>";
+listEbooks.innerHTML = "<a class='menu__link' href='#ebooks'>Ebooks</a>";
+listBooks.innerHTML = "<a class='menu__link' href='#books'>Books</a>";
+listContact.innerHTML = "<a class='menu__link' href='#contact'>Contact</a>";
+
+
+let linkScrolling = document.querySelector('.menu__link');
+linkScrolling.scrollIntoView({behavior: "smooth"});
         
 /**
  * End Helper Functions
@@ -59,12 +52,6 @@ const navbar_list = document.getElementById("navbar__list");
 const menu_links = document.querySelectorAll('.menu__link');
 const sections = document.querySelectorAll('section');
 
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
 
 // Add class 'active' to section when near top of viewport
 
@@ -83,7 +70,13 @@ function changeActiveItem(){
     sections[index].classList.add('active-section');
 }
 
-// Scroll to anchor ID using scrollTO event
+/**
+ * End Main Functions
+ * Begin Events
+ * 
+*/
+
+// Scroll to anchor ID using scroll event
 changeActiveItem();
 window.addEventListener('scroll', changeActiveItem);
 
